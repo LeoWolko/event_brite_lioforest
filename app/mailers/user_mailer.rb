@@ -12,4 +12,14 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 
   end
 
+def email_event_confirmation(attendance)
+
+		@user = attendance.user
+		@event = attendance.event
+		@admin = attendance.event.admin
+		
+		mail(to: @admin.email, subject: 'Un nouveau participant à un event !') 
+	end
+
+
 end

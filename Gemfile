@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'sendgrid-ruby'
+
+gem 'better_errors'
 gem 'table_print' 
 gem 'faker'
 gem 'dotenv-rails'
